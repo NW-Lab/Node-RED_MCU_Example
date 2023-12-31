@@ -31,7 +31,7 @@ Digital In ( Pull Up )
 ## TF Card
 | MOSI | MISO | CLK | CS  |
 | :--: | :--: | :-: | :-: |
-| 22   | 19   | 18  | 4   |
+| 23   | 19   | 18  | 4   |
 
 ## Grove A Port
 | SCL | SDA | 5V  | GND |

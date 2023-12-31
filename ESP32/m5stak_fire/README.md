@@ -45,6 +45,7 @@ Digital In ( Pull Up )
 - 6-Axis MotionTracking Sensor MPU6886:0x68
 - 3-Axis Geomagnetic Sensor BMM150:0x10
 - 3-Axis Geomagnetic Sensor SH200Q:0x6c
+
 | SCL | SDA |
 | :-: | :-: |
 | 22  | 21  |

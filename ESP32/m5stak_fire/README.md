@@ -12,13 +12,13 @@ Platform esp32/m5stack_fire
 | Display | ILI9342C(320x240) | 〇   | 〇   | 〇   |
 |Power Controler|IP5306||||
 |3-Axis Geomagnetic Sensor|BMM150|||
-|6-Axis MotionTracking Sensor|SH200Q||||
+|6-Axis MotionTracking Sensor|SH200Q(初期バージョン)||||
 |6-Axis MotionTracking Sensor|MPU6886|||
 | Button  | A/B/C | 〇  | 〇  | 〇  |
 | Speaker |     | 〇 | 〇 | 〇 |
 | MIC |     |  |  |  |
 | LED BAR(NEO Pixel) |     | 〇 | 〇 | 〇 |
-SH200Q(初期バージョン),MP6886の2バージョンある
+
 # Pin Map
 https://docs.m5stack.com/en/core/fire
 

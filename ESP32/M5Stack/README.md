@@ -1,5 +1,5 @@
 # ESP32/M5STACK
-Plastform esp32/m5stack
+Platform esp32/m5stack
 
 |Moddable|Node-RED MCU|Node-RED MCU Plugin|
 |:--:|:--:|:--:|

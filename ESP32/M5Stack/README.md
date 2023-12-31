@@ -5,10 +5,11 @@
 |〇|〇|〇|
 
 # Feature
-|         |          | Moddable | NodeRED MCU | NodeRED MCU Plugin |
-| ------- | -------- | :------: | :---------: | :----------------: |
-| Display | ILI9342C | 〇        | 〇           | 〇                  |
-| MCU     | ESP32    | 〇        | 〇           | 〇                  |
+|     |       | Moddable | NodeRED MCU | NodeRED MCU Plugin |     |         |          |     |     |     |
+| --- | ----- | :------: | :---------: | :----------------: | --- | ------- | -------- | --- | --- | --- |
+| MCU | ESP32 | 〇        | 〇           | 〇                  |  
+| Display | ILI9342C | 〇   | 〇   | 〇   |
+|Power Controler|IP5306||||
 | Button  | A/B/C    | 〇        | 〇           | 〇                  |
 | Speaker        |          | 〇         | 〇            | 〇                   |
 

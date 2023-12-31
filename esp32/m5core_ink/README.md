@@ -12,7 +12,7 @@ Platform esp32/m5core_ink
 | Display(200x200) | GDEW0154M09 | 〇   | 〇   | 〇   |
 | Button|| 〇   | 〇   | 〇   |
 |LED|Green| 〇   | 〇   | 〇   |
-|RTC|BM8563|〇   |〇   |〇   |
+|RTC|BM8563|   |   |   |
 |Buzzer|Passive Buzzer||||
 
 # Pin Map

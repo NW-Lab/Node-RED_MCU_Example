@@ -1,4 +1,4 @@
-# ESP32/M5STACK Core2
+# ESP32/M5STACK Core2 & Core2AWS
 Platform esp32/m5stack_core2
 
 |Moddable|Node-RED MCU|Node-RED MCU Plugin|
@@ -18,6 +18,8 @@ Platform esp32/m5stack_core2
 | Speaker |NS4168|  |  |  |
 | MIC |SPM1423|  |  |  |
 | RTC |BM8563|  |  |  |
+|(AWS)Hardware encryption chip|ATECC608B-TNGTLSU-G (addr 0x35)||||
+|(AWS)LED Bar(NeoPixel)|SK6812*10|〇|〇|〇|
 
 # Pin Map
 https://docs.m5stack.com/en/core/core2
@@ -41,6 +43,7 @@ https://docs.m5stack.com/en/core/core2
 - 6-Axis MotionTracking Sensor MPU6886:0x68
 - RTC BM8563
 - AXP192
+- (AWS)Hardware encryption chip ATECC608B-TNGTLSU-G:0x35
 
 | SCL | SDA |
 | :-: | :-: |
@@ -51,15 +54,20 @@ https://docs.m5stack.com/en/core/core2
 | :--: | :--: | :-: | :-: |
 | 23   | 38   | 18  | 4   |
 
+## LED Bar(NeoPixel)
+|Data|
+|:==:|
+|25|
+
 ## Grove A Port
 | SCL | SDA | 5V  | GND |
 | :-: | :-: | :-: | :-: |
 | 33  | 32  | 5V  | GND |
-## Grove B Port(Optional)
+## Grove B Port(AWS)
 | ADC(AnalogIn) | DAC(AnalogOut) | 5V  | GND |
 | :-: | :-: | :-: | :-: |
 | 36  | 26  | 5V  | GND |
-## Grove C Port(Optional)
+## Grove C Port(AWS)
 | RXD | TXD | 5V  | GND |
 | :-: | :-: | :-: | :-: |
 | 14  | 13  | 5V  | GND |

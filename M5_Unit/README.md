@@ -1,12 +1,12 @@
 # Sensor
 |Unit Name|function|Device||Moddable|NodeRed MCU|備考|
-|:==:|:==:|:==:|:==:|:==:|:==|
+|:--:|:--:|:--:|:--:|:--:|:--:|:--|
 |Ultrasonic|Distance Sonic|RCWL-9600|I2C||||
 |Ultrasonic I2C|Distance Sonic|RCWL-9620|I2C||||
 |Ultrasonic IO|Distance Sonic|RCWL-9620|GPIO||||
 |TOF|Laser Distanace Measure|VL53L0c|I2C||||
 |Unit Limit|Travel Switch||GPIO|||
-|PIR|PIR Human Motion|GPIO|||
+|PIR|PIR Human Motion||GPIO|||
 |OP90|Limit Switch|ITR9606|GPIO|||
 |OP180|Limit Switch|ITR9606|GPIO|||
 |Weight|Weight|HX711|GPIO||||

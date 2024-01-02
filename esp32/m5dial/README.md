@@ -8,7 +8,7 @@ m5stampS3+周辺機器
 
 # Feature
 | | | Moddable | NodeRED MCU | NodeRED MCU Plugin|備考|
-|:--|:--|:--: |:--: |:--:|
+|:--|:--|:--: |:--: |:--:|:--|
 | MCU | ESP32-S3(Flash 8MB) | 〇 | 〇 | 〇 | 
 |Screen(240x240)| GC9A01| 〇 | 〇 | 〇 |
 |Dial|Rotary Encoder|||pulse count(SignalPin:40,ControlPin:41)|同時に4ノッチ動くみたい|

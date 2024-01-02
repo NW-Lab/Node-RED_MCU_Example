@@ -10,11 +10,13 @@ m5stampS3+周辺機器
 | | | Moddable | NodeRED MCU |備考|
 |:--|:--|:--: |:--:|:--|
 | MCU | ESP32-S3(Flash 8MB) | 〇 | 〇 | | 
-|Screen(240x240)| GC9A01| 〇 | 〇 ||
+|Screen(240x240)| GC9A01| 〇 |Dashboard||
+|Touch driver|FT3267||Dashboard||
 |Dial|Rotary Encoder||pulse count<br/>(SignalPin:40,ControlPin:41)|同時に4ノッチ動くみたい|
-|Touch driver|FT3267||||
 |RFID|WS1850S||||
 |RTC|BM8563||||
+|Buzzer|||PWM oout(Pin:3)||
+|Wake Button|||DigitalIn(Input,Pin:10)|Bottom|
 |(Stamp)Button|BTN0|〇|〇||
 |(Stamp)RGB LED(NeoPixel)|WS2812C-2020|〇|Neopixel||
 
@@ -33,7 +35,7 @@ https://docs.m5stack.com/en/core/M5Dial
 | 21 |
 
 ## Buzzer 
-Digital Out
+PWM Out
 | BZ |
 | :---: |
 | 3  |

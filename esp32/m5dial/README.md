@@ -15,7 +15,7 @@ m5stampS3+周辺機器
 |Dial|Rotary Encoder||pulse count<br/>(SignalPin:40,ControlPin:41)|同時に4ノッチ動くみたい|
 |RFID|WS1850S||||
 |RTC|BM8563||||
-|Buzzer|||PWM oout(Pin:3)||
+|Buzzer|||PWM out(Pin:3)||
 |Wake Button|||DigitalIn(Input,Pin:10)|Bottom|
 |(Stamp)Button|BTN0|〇|〇||
 |(Stamp)RGB LED(NeoPixel)|WS2812C-2020|〇|Neopixel||

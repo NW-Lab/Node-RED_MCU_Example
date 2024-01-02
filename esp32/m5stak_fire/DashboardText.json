@@ -1,0 +1,225 @@
+[
+    {
+        "id": "92634e6cc27fb18a",
+        "type": "tab",
+        "label": "Dushboard_Text",
+        "disabled": false,
+        "info": "",
+        "env": [],
+        "_mcu": {
+            "mcu": true
+        }
+    },
+    {
+        "id": "6db079dc90794149",
+        "type": "mcu_digital_in",
+        "z": "92634e6cc27fb18a",
+        "name": "BtnA",
+        "pin": "39",
+        "mode": "InputPullUp",
+        "edge": "1",
+        "debounce": "10",
+        "initial": false,
+        "invert": false,
+        "moddable_manifest": {
+            "include": "$(NODEREDMCU)/nodes/mcu/digital/manifest.json"
+        },
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 150,
+        "y": 220,
+        "wires": [
+            [
+                "3476e576821743bf"
+            ]
+        ]
+    },
+    {
+        "id": "3f6542265f0cd6e0",
+        "type": "mcu_digital_in",
+        "z": "92634e6cc27fb18a",
+        "name": "BtnC",
+        "pin": "37",
+        "mode": "InputPullUp",
+        "edge": "1",
+        "debounce": "10",
+        "initial": false,
+        "invert": false,
+        "moddable_manifest": {
+            "include": "$(NODEREDMCU)/nodes/mcu/digital/manifest.json"
+        },
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 150,
+        "y": 340,
+        "wires": [
+            [
+                "33c6f2b475a263c5"
+            ]
+        ]
+    },
+    {
+        "id": "d8f5727b40723b81",
+        "type": "mcu_digital_in",
+        "z": "92634e6cc27fb18a",
+        "name": "BtnB",
+        "pin": "38",
+        "mode": "InputPullUp",
+        "edge": "1",
+        "debounce": "10",
+        "initial": false,
+        "invert": false,
+        "moddable_manifest": {
+            "include": "$(NODEREDMCU)/nodes/mcu/digital/manifest.json"
+        },
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 150,
+        "y": 280,
+        "wires": [
+            [
+                "a8e88558a0e540c7"
+            ]
+        ]
+    },
+    {
+        "id": "3476e576821743bf",
+        "type": "template",
+        "z": "92634e6cc27fb18a",
+        "name": "BtnA",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": " Button A Push!",
+        "output": "str",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 290,
+        "y": 220,
+        "wires": [
+            [
+                "66566667011300c4"
+            ]
+        ]
+    },
+    {
+        "id": "33c6f2b475a263c5",
+        "type": "template",
+        "z": "92634e6cc27fb18a",
+        "name": "BtnC",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": " Button C Push!",
+        "output": "str",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 290,
+        "y": 340,
+        "wires": [
+            [
+                "66566667011300c4"
+            ]
+        ]
+    },
+    {
+        "id": "a8e88558a0e540c7",
+        "type": "template",
+        "z": "92634e6cc27fb18a",
+        "name": "BtnB",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": " Button B Push!",
+        "output": "str",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 290,
+        "y": 280,
+        "wires": [
+            [
+                "66566667011300c4"
+            ]
+        ]
+    },
+    {
+        "id": "66566667011300c4",
+        "type": "ui_text",
+        "z": "92634e6cc27fb18a",
+        "group": "05a278c5cb8a11b0",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Message",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 540,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "ed06da19b3b3d61b",
+        "type": "inject",
+        "z": "92634e6cc27fb18a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "Push Button!",
+        "payloadType": "str",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 220,
+        "y": 140,
+        "wires": [
+            [
+                "66566667011300c4"
+            ]
+        ]
+    },
+    {
+        "id": "05a278c5cb8a11b0",
+        "type": "ui_group",
+        "name": "tb",
+        "tab": "3db2d4310e9d80cc",
+        "order": 1,
+        "disp": false,
+        "width": "4",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "3db2d4310e9d80cc",
+        "type": "ui_tab",
+        "name": "home",
+        "icon": "dashboard",
+        "disabled": true,
+        "hidden": true
+    }
+]

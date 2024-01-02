@@ -1,0 +1,140 @@
+[
+    {
+        "id": "17328d33642723e8",
+        "type": "tab",
+        "label": "DashBoardGuage",
+        "disabled": false,
+        "info": "",
+        "env": [],
+        "_mcu": {
+            "mcu": true
+        }
+    },
+    {
+        "id": "ce7820388dbc0f67",
+        "type": "mcu_pulse_count",
+        "z": "17328d33642723e8",
+        "name": "Dial",
+        "signal": "40",
+        "control": "41",
+        "moddable_manifest": {
+            "include": "$(NODEREDMCU)/nodes/mcu/pulsecount/manifest.json"
+        },
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 150,
+        "y": 140,
+        "wires": [
+            [
+                "f7dd175301af11f6"
+            ]
+        ]
+    },
+    {
+        "id": "8c44c5f728372478",
+        "type": "debug",
+        "z": "17328d33642723e8",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 500,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "f7dd175301af11f6",
+        "type": "function",
+        "z": "17328d33642723e8",
+        "name": "/4",
+        "func": "const val=Math.floor(msg.payload/4);\nif(context.get(\"val\")!=val){\n    context.set(\"val\",val);\n    msg.payload=val;\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "// ここに記述したコードは、ノードをデプロイした時に\n// 一度だけ実行されます。\ncontext.set(\"val\",0);",
+        "finalize": "",
+        "libs": [],
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 290,
+        "y": 140,
+        "wires": [
+            [
+                "8c44c5f728372478",
+                "2703def79ff8f5dc"
+            ]
+        ]
+    },
+    {
+        "id": "b0e4fde4c38d1445",
+        "type": "comment",
+        "z": "17328d33642723e8",
+        "name": "DialのDashBoardについて",
+        "info": "DASHBOARD（DIAL）\nDashBoardTABでTAB名の非表示を選択\n6x6で丁度良いサイズ\n",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 310,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "2703def79ff8f5dc",
+        "type": "ui_gauge",
+        "z": "17328d33642723e8",
+        "name": "",
+        "group": "05a278c5cb8a11b0",
+        "order": 0,
+        "width": "6",
+        "height": "6",
+        "gtype": "donut",
+        "title": "",
+        "label": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 510,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "05a278c5cb8a11b0",
+        "type": "ui_group",
+        "name": "tb",
+        "tab": "3db2d4310e9d80cc",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "3db2d4310e9d80cc",
+        "type": "ui_tab",
+        "name": "home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": true
+    }
+]

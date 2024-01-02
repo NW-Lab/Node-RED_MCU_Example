@@ -1,6 +1,7 @@
 # ESP32/M5Dial
 Platform esp32/m5dial
-m5stampS3+周辺機器
+
+m5stampS3+周辺機器で構成されています。
 
 |Moddable|Node-RED MCU|Node-RED MCU Plugin|
 |:--:|:--:|:--:|

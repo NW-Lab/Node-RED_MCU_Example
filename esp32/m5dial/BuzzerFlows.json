@@ -1,0 +1,90 @@
+[
+    {
+        "id": "e74d546bc3ef8649",
+        "type": "tab",
+        "label": "Buzzer",
+        "disabled": false,
+        "info": "",
+        "env": [],
+        "_mcu": {
+            "mcu": true
+        }
+    },
+    {
+        "id": "46af7664ee0d3c54",
+        "type": "inject",
+        "z": "e74d546bc3ef8649",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 220,
+        "y": 120,
+        "wires": [
+            [
+                "43a536092210dd91"
+            ]
+        ]
+    },
+    {
+        "id": "43a536092210dd91",
+        "type": "trigger",
+        "z": "e74d546bc3ef8649",
+        "name": "",
+        "op1": "0.5",
+        "op2": "0",
+        "op1type": "num",
+        "op2type": "num",
+        "duration": "500",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 420,
+        "y": 120,
+        "wires": [
+            [
+                "612f85b22bf679fa"
+            ]
+        ]
+    },
+    {
+        "id": "612f85b22bf679fa",
+        "type": "mcu_pwm_out",
+        "z": "e74d546bc3ef8649",
+        "name": "",
+        "pin": "3",
+        "hz": "1000",
+        "moddable_manifest": {
+            "include": "$(NODEREDMCU)/nodes/mcu/pwm/manifest.json"
+        },
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 610,
+        "y": 120,
+        "wires": []
+    }
+]

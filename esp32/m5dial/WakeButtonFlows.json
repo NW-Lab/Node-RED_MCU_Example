@@ -1,0 +1,57 @@
+[
+    {
+        "id": "5553486f848acbd5",
+        "type": "tab",
+        "label": "WakeButton",
+        "disabled": false,
+        "info": "",
+        "env": [],
+        "_mcu": {
+            "mcu": true
+        }
+    },
+    {
+        "id": "d9506e79d1929c73",
+        "type": "mcu_digital_in",
+        "z": "5553486f848acbd5",
+        "name": "",
+        "pin": "42",
+        "mode": "Input",
+        "edge": "3",
+        "debounce": 0,
+        "initial": false,
+        "invert": false,
+        "moddable_manifest": {
+            "include": "$(NODEREDMCU)/nodes/mcu/digital/manifest.json"
+        },
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 110,
+        "y": 320,
+        "wires": [
+            [
+                "31153b97a8b79d90"
+            ]
+        ]
+    },
+    {
+        "id": "31153b97a8b79d90",
+        "type": "debug",
+        "z": "5553486f848acbd5",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 300,
+        "y": 320,
+        "wires": []
+    }
+]

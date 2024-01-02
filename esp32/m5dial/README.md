@@ -60,3 +60,7 @@ Digital Out
 | IN | OUT | 5V  | GND |
 | :-: | :-: | :-: | :-: |
 | 1  | 2  | 5V  | GND |
+
+# 参考
+DashBoardは6X6ぐらいが良さそう。
+DashBordサイドバーでタイトルを消すと良い。

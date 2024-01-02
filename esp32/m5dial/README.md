@@ -9,8 +9,8 @@ m5stampS3+周辺機器
 # Feature
 | | | Moddable | NodeRED MCU |備考|
 |:--|:--|:--: |:--:|:--|
-| MCU | ESP32-S3(Flash 8MB) | 〇 | 〇 | 〇 | 
-|Screen(240x240)| GC9A01| 〇 | 〇 | 〇 |
+| MCU | ESP32-S3(Flash 8MB) | 〇 | 〇 | | 
+|Screen(240x240)| GC9A01| 〇 | 〇 ||
 |Dial|Rotary Encoder||pulse count<br/>(SignalPin:40,ControlPin:41)|同時に4ノッチ動くみたい|
 |Touch driver|FT3267||||
 |RFID|WS1850S||||

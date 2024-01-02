@@ -11,6 +11,7 @@ m5stampS3+周辺機器
 |:--|:--|:--: |:--: |:--:|
 | MCU | ESP32-S3(Flash 8MB) | 〇 | 〇 | 〇 | 
 |Screen(240x240)| GC9A01| 〇 | 〇 | 〇 |
+|Dial|Rotary Encoder|||pulse count|
 |Touch driver|FT3267||||
 |RFID|WS1850S||||
 |RTC|BM8563||||
@@ -40,7 +41,7 @@ Digital Out
 ## Encoder 
 | A | B |
 |:---:|:---:|
-| 39 | 40 |
+| 41 | 40 |
 
 ## Internal I2C
 - RTC8563

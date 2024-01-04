@@ -12,7 +12,7 @@ Platform esp32/m5stack_core2
 | Display |ILI9342C(320x240)| 〇|Dashboard||
 | Touch Screen | FT6336U |〇|DashBoard||
 |Power Controler|AXP192||||
-|Vibration motor|||||
+|Vibration motor|||△||
 |3-Axis Geomagnetic Sensor|BMM150|||
 |6-Axis MotionTracking Sensor|MPU6886|||
 | Speaker |NS4168|  |  |  |

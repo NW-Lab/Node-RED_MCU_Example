@@ -6,11 +6,11 @@ Platform esp32/m5stack_core2
 |〇|〇|〇|
 
 # Feature
-| | | Moddable | NodeRED MCU | NodeRED MCU Plugin|
-|:--|:--|:--: |:--: |:--:|
-| MCU | ESP32(Flash16MB+PSRAM8MB) | 〇 | 〇 | 〇 |  
-| Display | ILI9342C(320x240) | 〇   | 〇   | 〇   |
-| Touch Screen | FT6336U | 〇   | 〇   | 〇   |
+| | | Moddable | NodeRED MCU |備考|
+|:--|:--|:--: |:--: |:--|
+| MCU | ESP32(Flash16MB+PSRAM8MB) | 〇 | 〇 ||  
+| Display |ILI9342C(320x240)| 〇|Dashboard||
+| Touch Screen | FT6336U |〇|DashBoard||
 |Power Controler|AXP192||||
 |Vibration motor|||||
 |3-Axis Geomagnetic Sensor|BMM150|||
@@ -19,7 +19,7 @@ Platform esp32/m5stack_core2
 | MIC |SPM1423|  |  |  |
 | RTC |BM8563|  |  |  |
 |(AWS)Hardware encryption chip|ATECC608B-TNGTLSU-G (addr 0x35)||||
-|(AWS)LED Bar(NeoPixel)|SK6812*10|〇|〇|〇|
+|(AWS)LED Bar(NeoPixel)|SK6812*10||neopixels||
 
 # Pin Map
 https://docs.m5stack.com/en/core/core2
@@ -71,3 +71,10 @@ https://docs.m5stack.com/en/core/core2
 | RXD | TXD | 5V  | GND |
 | :-: | :-: | :-: | :-: |
 | 14  | 13  | 5V  | GND |
+
+# 備考
+## Vibration
+Functionで使えます。
+```
+vibration.write(true);
+```

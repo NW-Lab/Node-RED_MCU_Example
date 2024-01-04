@@ -6,13 +6,13 @@ Platform esp32/m5stack
 |〇|〇|〇|
 
 # Feature
-| | | Moddable | NodeRED MCU | NodeRED MCU Plugin|
+| | | Moddable | NodeRED MCU |備考|
 |:--|:--|:--: |:--: |:--:|
-| MCU | ESP32 | 〇 | 〇 | 〇 |  
-| Display | ILI9342C | 〇   | 〇   | 〇   |
+| MCU | ESP32 | 〇 | 〇 | |  
+| Display | ILI9342C | 〇   |Dashboard|    |
 |Power Controler|IP5306||||
-| Button  | A/B/C | 〇  | 〇  | 〇  |
-| Speaker |     | 〇 | 〇 | 〇 |
+| Button  | A/B/C | 〇  |DigitalIn<br/>(Input-PullUp,BtnA:39,BtnB:38,BtnC:37)||
+| Speaker |     | 〇 |PWM out<br/>(Pin:25)||
 
 # Pin Map
 https://docs.m5stack.com/en/core/basic

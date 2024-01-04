@@ -1,0 +1,114 @@
+[
+    {
+        "id": "9d8def21998acd7e",
+        "type": "tab",
+        "label": "DashBoardButton",
+        "disabled": false,
+        "info": "",
+        "env": [],
+        "_mcu": {
+            "mcu": true
+        }
+    },
+    {
+        "id": "429862bd35cf7923",
+        "type": "ui_button",
+        "z": "9d8def21998acd7e",
+        "name": "",
+        "group": "05a278c5cb8a11b0",
+        "order": 1,
+        "width": "3",
+        "height": "3",
+        "passthru": false,
+        "label": "Btn_A",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "ButtonA Push!",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 190,
+        "y": 240,
+        "wires": [
+            [
+                "5e4105d8d269a13f"
+            ]
+        ]
+    },
+    {
+        "id": "1521068a1beb2b62",
+        "type": "ui_button",
+        "z": "9d8def21998acd7e",
+        "name": "",
+        "group": "05a278c5cb8a11b0",
+        "order": 1,
+        "width": "3",
+        "height": "3",
+        "passthru": false,
+        "label": "Btn_B",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "ButtonB Push!",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 190,
+        "y": 320,
+        "wires": [
+            [
+                "5e4105d8d269a13f"
+            ]
+        ]
+    },
+    {
+        "id": "5e4105d8d269a13f",
+        "type": "ui_text",
+        "z": "9d8def21998acd7e",
+        "group": "05a278c5cb8a11b0",
+        "order": 3,
+        "width": "6",
+        "height": "2",
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "className": "",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 370,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "05a278c5cb8a11b0",
+        "type": "ui_group",
+        "name": "tb",
+        "tab": "3db2d4310e9d80cc",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "3db2d4310e9d80cc",
+        "type": "ui_tab",
+        "name": "home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": true
+    }
+]

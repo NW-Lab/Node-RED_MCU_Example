@@ -15,7 +15,7 @@ m5stampS3+周辺機器で構成されています。
 |Touch driver|FT3267||Dashboard||
 |Dial|Rotary Encoder||pulse count<br/>(SignalPin:40,ControlPin:41)|同時に4ノッチ動くみたい|
 |RFID|WS1850S||||
-|RTC|BM8563||||
+|RTC|BM8563||clock(NXP PF8503,Data:11,Clock:12)|BM8563はPF85563の互換品です|
 |Buzzer|||PWM out(Pin:3)||
 |Wake Button|||DigitalIn(Input,Pin:10)|Bottom|
 |(Stamp)Button|BTN0|〇|〇||

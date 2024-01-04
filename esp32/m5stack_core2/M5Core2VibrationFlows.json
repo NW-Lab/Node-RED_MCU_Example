@@ -1,0 +1,107 @@
+[
+    {
+        "id": "2a864178222053ce",
+        "type": "tab",
+        "label": "M5Core2_Vibration",
+        "disabled": false,
+        "info": "",
+        "env": [],
+        "_mcu": {
+            "mcu": true
+        }
+    },
+    {
+        "id": "b93c8eb57fb82513",
+        "type": "inject",
+        "z": "2a864178222053ce",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 220,
+        "y": 120,
+        "wires": [
+            [
+                "bb8d0d1f63b65c75"
+            ]
+        ]
+    },
+    {
+        "id": "bb8d0d1f63b65c75",
+        "type": "trigger",
+        "z": "2a864178222053ce",
+        "name": "",
+        "op1": "true",
+        "op2": "false",
+        "op1type": "bool",
+        "op2type": "bool",
+        "duration": "500",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 420,
+        "y": 120,
+        "wires": [
+            [
+                "225c4ef3c95a0315"
+            ]
+        ]
+    },
+    {
+        "id": "225c4ef3c95a0315",
+        "type": "function",
+        "z": "2a864178222053ce",
+        "name": "Vibration",
+        "func": "vibration.write(msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 1,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 600,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1413d7adb78c3227",
+        "type": "comment",
+        "z": "2a864178222053ce",
+        "name": "Build時の注意",
+        "info": "1回目は関数が無いというエラーが出ますが、再度Buildすると動きます。",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 330,
+        "y": 180,
+        "wires": []
+    }
+]

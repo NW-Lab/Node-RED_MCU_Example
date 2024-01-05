@@ -1,0 +1,139 @@
+[
+    {
+        "id": "772fe6818111c14b",
+        "type": "tab",
+        "label": "Core2Neopixels",
+        "disabled": false,
+        "info": "",
+        "env": [],
+        "_mcu": {
+            "mcu": false
+        }
+    },
+    {
+        "id": "cb3bf1a83d409b56",
+        "type": "mcu_neopixels",
+        "z": "772fe6818111c14b",
+        "name": "",
+        "pin": "25",
+        "length": "10",
+        "order": "GRB",
+        "mode": "1",
+        "background": "#000000",
+        "foreground": "#c739ca",
+        "wipe": "40",
+        "brightness": "61",
+        "moddable_manifest": {
+            "include": "$(NODEREDMCU)/nodes/mcu/neopixels/manifest.json"
+        },
+        "_mcu": {
+            "mcu": false
+        },
+        "x": 610,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "9233c3a27b648510",
+        "type": "function",
+        "z": "772fe6818111c14b",
+        "name": "function 1",
+        "func": "let i=context.get(\"val\");\ni=i+1;\nif(i>6)i=0;\ncontext.set(\"val\",i);\nconst x=[0xff0000,0xffff00,0x00ff00,0x00ffff,0x0000ff,0xff00ff];\nconst pixels=[];\nfor(let j=0;j<6;j++){\npixels[(i+j)%10]=x[j];\n}\nmsg.colors=pixels;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "// ここに記述したコードは、ノードをデプロイした時に\n// 一度だけ実行されます。\ncontext.set(\"val\",0);",
+        "finalize": "",
+        "libs": [],
+        "_mcu": {
+            "mcu": false
+        },
+        "x": 340,
+        "y": 160,
+        "wires": [
+            [
+                "94ecbcf3658d5320"
+            ]
+        ]
+    },
+    {
+        "id": "911ede9830228414",
+        "type": "inject",
+        "z": "772fe6818111c14b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "_mcu": {
+            "mcu": false
+        },
+        "x": 140,
+        "y": 100,
+        "wires": [
+            [
+                "9233c3a27b648510"
+            ]
+        ]
+    },
+    {
+        "id": "7cfdd99028fcc398",
+        "type": "complete",
+        "z": "772fe6818111c14b",
+        "name": "",
+        "scope": [
+            "cb3bf1a83d409b56"
+        ],
+        "uncaught": false,
+        "_mcu": {
+            "mcu": false
+        },
+        "x": 130,
+        "y": 160,
+        "wires": [
+            [
+                "9233c3a27b648510"
+            ]
+        ]
+    },
+    {
+        "id": "94ecbcf3658d5320",
+        "type": "delay",
+        "z": "772fe6818111c14b",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "100",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "_mcu": {
+            "mcu": false
+        },
+        "x": 430,
+        "y": 240,
+        "wires": [
+            [
+                "cb3bf1a83d409b56"
+            ]
+        ]
+    }
+]

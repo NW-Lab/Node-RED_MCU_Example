@@ -56,7 +56,7 @@ https://docs.m5stack.com/en/core/core2
 
 ## LED Bar(NeoPixel)
 |Data|
-|:==:|
+|:--:|
 |25|
 
 ## Grove A Port

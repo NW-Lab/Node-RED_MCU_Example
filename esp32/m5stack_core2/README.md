@@ -12,7 +12,7 @@ Platform esp32/m5stack_core2
 | Display |ILI9342C(320x240)| 〇|Dashboard||
 | Touch Screen | FT6336U |〇|DashBoard||
 |Power Controler|AXP192||||
-|Vibration motor|||△||
+|Vibration motor||vibration.write|△||
 |3-Axis Geomagnetic Sensor|BMM150|||
 |6-Axis MotionTracking Sensor|MPU6886|||
 | Speaker |NS4168|  |  |  |
@@ -20,6 +20,7 @@ Platform esp32/m5stack_core2
 | RTC |BM8563|  |  |  |
 |(AWS)Hardware encryption chip|ATECC608B-TNGTLSU-G (addr 0x35)||||
 |(AWS)LED Bar(NeoPixel)|SK6812*10||neopixels||
+△はModdableの関数をFunctionノードで使うことで可能。
 
 # Pin Map
 https://docs.m5stack.com/en/core/core2

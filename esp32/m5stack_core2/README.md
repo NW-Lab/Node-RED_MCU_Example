@@ -15,7 +15,7 @@ Platform esp32/m5stack_core2
 |Vibration motor||vibration.write|△||
 |3-Axis Geomagnetic Sensor|BMM150|||
 |6-Axis MotionTracking Sensor|MPU6886|||
-| Speaker |NS4168|  |  |  |
+| Speaker |NS4168|  | audioout|  |
 | MIC |SPM1423|  |  |  |
 | RTC |BM8563|  |  |  |
 |(AWS)Hardware encryption chip|ATECC608B-TNGTLSU-G (addr 0x35)||||

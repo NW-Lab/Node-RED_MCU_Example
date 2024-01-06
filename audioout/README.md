@@ -10,9 +10,75 @@ https://qiita.com/kitazaki/items/1236006d169e7185f52f
 - msg.flush 終わり
 - msg.wave wave_Streamer
 - msg.sbc  sbc_Streamer
-- msg.tones
+- msg.tones toneを出す。
 - msg.resource　組み込み音源
-- msg.samples
+- msg.samples 波形データを使う。
+
+# tones
+msg.tonesに音の高さと、長さの組み合わせの配列（JSON）を渡す。
+msg.tones=[[440,200],[880,200]]
+
+```
+[
+    {
+        "id": "e74d546bc3ef8649",
+        "type": "tab",
+        "label": "AudioOut",
+        "disabled": false,
+        "info": "",
+        "env": [],
+        "_mcu": {
+            "mcu": true
+        }
+    },
+    {
+        "id": "ab118d4dcf41cba0",
+        "type": "inject",
+        "z": "e74d546bc3ef8649",
+        "name": "",
+        "props": [
+            {
+                "p": "tones",
+                "v": "[[440,100],[880,100]]",
+                "vt": "json"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 270,
+        "y": 100,
+        "wires": [
+            [
+                "b6d7308cc0221f49"
+            ]
+        ]
+    },
+    {
+        "id": "b6d7308cc0221f49",
+        "type": "audioout",
+        "z": "e74d546bc3ef8649",
+        "name": "",
+        "volume": 1,
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 480,
+        "y": 100,
+        "wires": []
+    }
+]
+```
+
 
 # 組み込みresourceを利用する場合
 

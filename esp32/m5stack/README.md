@@ -12,7 +12,7 @@ Platform esp32/m5stack
 | Display | ILI9342C | 〇   |Dashboard|    |
 |Power Controler|IP5306||||
 | Button  | A/B/C | 〇  |DigitalIn<br/>(Input-PullUp,BtnA:39,BtnB:38,BtnC:37)||
-| Speaker |     | 〇 |PWM out<br/>(Pin:25)||
+| Speaker |     | 〇 |PWM out(Pin:25)<br/>audio out||
 
 # Pin Map
 https://docs.m5stack.com/en/core/basic

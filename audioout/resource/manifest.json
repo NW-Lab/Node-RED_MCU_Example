@@ -1,0 +1,31 @@
+{
+  "build": {
+    "MODULES": "c:\\pjt\\moddable\\modules",
+    "MCUROOT": "C:\\Users\\tauchi\\.node-red\\node_modules\\@ralphwetzel\\node-red-mcu-plugin\\node-red-mcu",
+    "REDNODES": "C:\\Users\\tauchi\\AppData\\Roaming\\npm\\node_modules\\node-red\\node_modules\\@node-red\\nodes"
+  },
+  "include": [
+    "$(MCUROOT)/manifest_host.json"
+  ],
+  "resources": {
+		"*": "./sound"
+	},
+  "modules": {
+    "*": [
+      "./main",
+      {
+        "source": "./flows",
+        "transform": "nodered2mcu"
+      }
+    ],
+    "~": []
+  },
+  "preload": [
+    "flows"
+  ],
+  "config": {
+    "noderedmcu": {
+      "editor": true
+    }
+  }
+}

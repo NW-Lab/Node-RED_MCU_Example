@@ -1,0 +1,49 @@
+[
+  {
+    "id": "c1179dd59cee4004",
+    "type": "tab",
+    "label": "フロー 2",
+    "disabled": false,
+    "info": "",
+    "env": []
+  },
+  {
+    "id": "be70b8d85950b837",
+    "type": "inject",
+    "z": "c1179dd59cee4004",
+    "name": "",
+    "props": [
+      {
+        "p": "resource",
+        "v": "sound",
+        "vt": "str"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": true,
+    "onceDelay": "1",
+    "topic": "",
+    "x": 170,
+    "y": 100,
+    "wires": [
+      [
+        "2f2d3f56d2ec42db"
+      ]
+    ]
+  },
+  {
+    "id": "2f2d3f56d2ec42db",
+    "type": "audioout",
+    "z": "c1179dd59cee4004",
+    "name": "",
+    "volume": 1,
+    "x": 340,
+    "y": 100,
+    "wires": []
+  }
+]

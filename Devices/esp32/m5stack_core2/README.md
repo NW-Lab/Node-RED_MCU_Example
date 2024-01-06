@@ -17,7 +17,7 @@ Platform esp32/m5stack_core2
 |6-Axis MotionTracking Sensor|MPU6886|||
 | Speaker |NS4168|  | audioout|  |
 | MIC |SPM1423|  |  |  |
-| RTC |BM8563|  |  |  |
+| RTC |BM8563|  |clock<br/>(NXP PF8503,Data:21,Clock:22)|BM8563はPF85563の互換品です|
 |(AWS)Hardware encryption chip|ATECC608B-TNGTLSU-G (addr 0x35)||||
 |(AWS)LED Bar(NeoPixel)|SK6812*10||neopixels||
 △はModdableの関数をFunctionノードで使うことで可能。
@@ -49,6 +49,7 @@ https://docs.m5stack.com/en/core/core2
 | SCL | SDA |
 | :-: | :-: |
 | 22  | 21  |
+※M5CoreRtcFlows　なぜかM5Stack Core2 AWSではうまく動きません。(リセットがかかる感じ)
 
 ## TF Card
 | MOSI | MISO | CLK | CS  |

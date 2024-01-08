@@ -94,14 +94,14 @@
 |8Servos Unit|Motor Servo Controller Driver Unit||I2C||||
 |HBridge v1.1 Unit|H-Bridge|RX7899+INA199A+STM32F030F4P6|I2C||||
 |Unit-QRCode|QR Code scan|STM32|I2C||||
-|SSR|Solid State Relay AC250V/DC5V||GPIO||DigitalOut||
 
 # I-O(Relay)
 |Unit Name|function|Device||Moddable|NodeRed MCU|備考|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--|
 |4-RELAY|4-Way relay AC250V/DC28V||I2C||||
-|2-RELAY|2-Way Relay AC250V/DC28V||GPIO||DigitalOut||
-|RELAY|Relay AC220V/DC30V||GPIO||DigitalOut||
+|2-RELAY|2-Way Relay AC250V/DC28V||GPIO||digital out||
+|RELAY|Relay AC220V/DC30V||GPIO||digital out(2)|1は未結線|
+|SSR|Solid State Relay AC250V/DC5V||GPIO||digital out(2)|1は未結線|
 |ACSSR|Single phase Solid State Relays||||
 |DCSSR Unit|?||I2C||||
 
@@ -125,7 +125,7 @@
 |CardKB v1.1|QWERTY keyboard|ATMEGA8A|I2C||||
 |CardKB|QWERTY Keyboard|MEGA328P|I2C||||
 
-# I-O (onput)
+# I-O (output)
 |Unit Name|function|Device||Moddable|NodeRed MCU|備考|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--|
 |DDS|Single Generators|AD9833|I2C||||
@@ -141,7 +141,7 @@
 |PaHUB2|I2C Spliter|PCA9548AP|I2C||||
 |PbHUB|GPIO Expander|MEGA328|I2C||||
 |PbHUB v1.1|GPIO Expander|STM32F030|I2C||||
-|3.96|Interface Converter to HT3.96|||||
+|3.96|Interface Converter to HT3.96||-|-|-|変換のみ|
 |TypeC2Grove|TypeC to Grove Power||-|-|-|電源供給用なのでノード不用|
 |M5:bit|Communication Transfer With Microbit||||
 |RCA|RCA A/V Composite Video or Audio||GPIO||||

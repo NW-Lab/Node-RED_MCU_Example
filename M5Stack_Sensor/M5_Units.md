@@ -3,9 +3,10 @@
 |:--:|:--:|:--:|:--:|:--:|:--:|:--|
 |ENV II|Humidity and Temperature|SHT30|I2C(0x44)||sensor(SHT3x)||
 |^|Baromeric Pressure&Temperature|BMP280|I2C(0x76)||sensor(BMP280)||
-|ENV III||SHT30|I2C||||
+|ENV III|Humidity and Temperature|SHT30|I2C(0x44)||sensor(SHT3x)||
 |^||QMP6988|^||||
-|ENV IV Unit|Environmental Temperature Humidity Moisture Pressure|SHT40|I2C||||
+|ENV IV Unit|Temperature and Humidity Moisture|SHT40|I2C(0x44)||||
+|^|Baromeric Pressure&Temperature|BMP280|I2C(0x76)||sensor(BMP280)||
 |ENV Pro Unit|Environmental Temperature Humidity IAQ Pressure|BME688|I2C||||
 ||
 |THERMAL|Infrared Imaging Measure|MLX90640|I2C|||||
@@ -31,8 +32,8 @@
 |IMU Pro Mini Unit||BMP280|I2C|||||
 |^||BMI270|^||||
 |^||BMM150|^||||
-|Unit Limit|Travel Switch||GPIO|||
-|PIR|PIR Human Motion||GPIO|||
+|Unit Limit|Travel Switch||GPIO||digital in(1)|2は未結線|
+|PIR|PIR Human Motion(人感センサ)||GPIO||digital in(1)|2は未結線|
 |OP90|Limit Switch|ITR9606|GPIO|||
 |OP180|Limit Switch|ITR9606|GPIO|||
 |Weight|Weight|HX711|GPIO||||

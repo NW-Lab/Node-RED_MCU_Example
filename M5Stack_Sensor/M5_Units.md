@@ -1,8 +1,8 @@
 # Sensor
 |Unit Name|function|Device||Moddable|NodeRed MCU|備考|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--|
-|ENV II||SHT30|I2C||||
-|^|Baromeric Pressure|BMP280|^||||
+|ENV II|Humidity and Temperature|SHT30|I2C(0x44)||sensor(SHT3x)||
+|^|Baromeric Pressure&Temperature|BMP280|I2C(0x76)||sensor(BMP280)||
 |ENV III||SHT30|I2C||||
 |^||QMP6988|^||||
 |ENV IV Unit|Environmental Temperature Humidity Moisture Pressure|SHT40|I2C||||

@@ -1,4 +1,4 @@
-# Sensor
+# Sensor(I2C)
 |Unit Name|function|Device||Moddable|NodeRed MCU|備考|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--|
 |ENV II|Humidity and Temperature|SHT30|I2C(0x44)||sensor(SHT3x)||
@@ -63,7 +63,6 @@
 |ID|Secure Key Storage|ATECC608B|I2C|||
 |FINGER|Fingerprint Recognition|FPC1020A|UART|||
 
-
 # Display
 |Unit Name|function|Device||Moddable|NodeRed MCU|備考|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--|
@@ -77,12 +76,12 @@
 # ACTUATORS(RGB LED)
 |Unit Name|function|Device||Moddable|NodeRed MCU|備考|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--|
-|RGB|RGB LEDx3|SK6812|GPIO||Neopixel||
-|RGB LED STRIP|Light Strip IP65 waterroof||GPIO||Neopixel||
-|RGB LED|Light Strips||GPIO||NeoPixel||
-|NeoHEX|RGB LED Panels||GPIO||Neopixel||
-|HEX|RGB LED Light Panel||GPIO||Neopixel||
-|Neco Unit|2020 RGB Neco Unit|WS2812C|GPIO||Neopixel||
+|RGB|RGB LEDx3|SK6812|GPIO||neopixels||
+|RGB LED STRIP|Light Strip IP65 waterroof||GPIO||neopixels||
+|RGB LED|Light Strips||GPIO||neopixels||
+|NeoHEX|RGB LED Panels||GPIO||neopixels||
+|HEX|RGB LED Light Panel||GPIO||neopixels||
+|Neco Unit|2020 RGB Neco Unit|WS2812C|GPIO||neopixels||
 
 # ACTUATORS
 |Unit Name|function|Device||Moddable|NodeRed MCU|備考|
@@ -105,34 +104,47 @@
 |ACSSR|Single phase Solid State Relays||||
 |DCSSR Unit|?||I2C||||
 
-# I-O
+# I-O (input)
+|Unit Name|function|Device||Moddable|NodeRed MCU|備考|
+|:--:|:--:|:--:|:--:|:--:|:--:|:--|
+|BUTTON|Single Button||GPIO||digitai in(input)|1のみ。Pullup回路有り|
+|Dual-BUTTON|Double Button||GPIO||digital in(input)|Pullup回路有り|
+|Key|Mechanical Keys Green Shaft||GPIO|sk6812|digital in(input:1) <br/> neopixels(2)|keyは回路有り|
+|JOYSTICK v1.1|3-Axis Input|MEGA8A|I2C||||
+|ANGLE|Rotary PotentioMeter||GPIO||analog|10kΩ+10kΩ可変抵抗|
+|Encoder|Rotary PotentoMeters 30Bit Pulse|STM32|I2C|||
+|FADER|SLIDE PotentioMeters|10kΩ + 12xSK6812|GPIO||analog(1)<br/>neopixel(2)|可変抵抗はVCCを3.3Vに変換した後で接続されている|
+|8Angle|Angle Adjustable PotentioMeter 8CH||I2C||||
+|8Encoder|Encoder 8ch|STM32F030|I2C||||
+|ExtEncoder Unit|Encode|STM32|I2C||||
+
+# I-O (keyboard)
+|Unit Name|function|Device||Moddable|NodeRed MCU|備考|
+|:--:|:--:|:--:|:--:|:--:|:--:|:--|
+|CardKB v1.1|QWERTY keyboard|ATMEGA8A|I2C||||
+|CardKB|QWERTY Keyboard|MEGA328P|I2C||||
+
+# I-O (onput)
 |Unit Name|function|Device||Moddable|NodeRed MCU|備考|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--|
 |DDS|Single Generators|AD9833|I2C||||
 |EXT.IO|GPIO Expander|PCA9554PW|I2C|||
 |EXT.IO2|IO Expander|STM32F030|I2C||||
-|Grove2Grove|Extend Control Measure|||||
-|HUB|Interface Expansion|||||||
+
+# I-O (Converter/分配機)
+|Unit Name|function|Device||Moddable|NodeRed MCU|備考|
+|:--:|:--:|:--:|:--:|:--:|:--:|:--|
+|Grove2Grove|On/Off Control + Current Meter||GPIO||digital out & analog||
+|HUB|Interface Expansion|-|-|-|-|結線のみ|
 |PaHUB|I2C Spliter|TCA9548A|I2C||||
 |PaHUB2|I2C Spliter|PCA9548AP|I2C||||
 |PbHUB|GPIO Expander|MEGA328|I2C||||
 |PbHUB v1.1|GPIO Expander|STM32F030|I2C||||
 |3.96|Interface Converter to HT3.96|||||
 |TypeC2Grove|TypeC to Grove Power||-|-|-|電源供給用なのでノード不用|
-|JOYSTICK v1.1|3-Axis Input|MEGA8A|I2C||||
-|ANGLE|Rotary PotentioMeter||GPIO||AnalogIn||
-|Encoder|Rotary PotentoMeters 30Bit Pulse||I2C|||
-|FADER|SLIDE PotentioMeters|SK6812|GPIO||||
-|Key|Mechanical Keys Green Shaft||GPIO||DigitalIn||
-|BUTTON|Single Button||GPIO||DigitalIn||
-|Dual-BUTTON|Double Button||GPIO||DigitalIn||
-|CardKB v1.1|QWERTY keyboard|ATMEGA8A|I2C||||
-|CardKB|QWERTY Keyboard|MEGA328P|I2C||||
 |M5:bit|Communication Transfer With Microbit||||
-|8Angle|Angle Adjustable PotentioMeter 8CH||I2C||||
-|8Encoder|Encoder 8ch|STM32F030|I2C||||
 |RCA|RCA A/V Composite Video or Audio||GPIO||||
-|ExtEncoder Unit|Encode|STM32|I2C||||
+
 
 # TRANCEIVERS
 |Unit Name|function|Device||Moddable|NodeRed MCU|備考|

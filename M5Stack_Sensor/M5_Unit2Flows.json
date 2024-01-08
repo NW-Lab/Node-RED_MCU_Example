@@ -1,0 +1,179 @@
+[
+    {
+        "id": "c606d97dbc747042",
+        "type": "tab",
+        "label": "M5_Unit2",
+        "disabled": false,
+        "info": "",
+        "env": [],
+        "_mcu": {
+            "mcu": true
+        }
+    },
+    {
+        "id": "222149659790f882",
+        "type": "inject",
+        "z": "c606d97dbc747042",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "30",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 110,
+        "y": 100,
+        "wires": [
+            [
+                "44618a862222c086"
+            ]
+        ]
+    },
+    {
+        "id": "44618a862222c086",
+        "type": "sensor",
+        "z": "c606d97dbc747042",
+        "name": "",
+        "platform": "",
+        "module": "embedded:sensor/Humidity-Temperature/SHT3x",
+        "options": {
+            "sensor": {
+                "io": "I2C",
+                "bus": "default",
+                "address": "0x44"
+            }
+        },
+        "configuration": "{}",
+        "moddable_manifest": {
+            "include": [
+                "$(NODEREDMCU)/nodes/mcu/sensor/manifest.json",
+                "$(MODDABLE)/modules/drivers/sensors/sht3x/manifest.json"
+            ]
+        },
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 290,
+        "y": 100,
+        "wires": [
+            [
+                "b0a458eb249ca090"
+            ]
+        ]
+    },
+    {
+        "id": "b0a458eb249ca090",
+        "type": "debug",
+        "z": "c606d97dbc747042",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 460,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "ef1bd9bcb0bbe9e9",
+        "type": "inject",
+        "z": "c606d97dbc747042",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "30",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "15",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 110,
+        "y": 160,
+        "wires": [
+            [
+                "c23b6383dc83b94b"
+            ]
+        ]
+    },
+    {
+        "id": "c23b6383dc83b94b",
+        "type": "sensor",
+        "z": "c606d97dbc747042",
+        "name": "",
+        "platform": "",
+        "module": "embedded:sensor/Barometer-Temperature/BMP280",
+        "options": {
+            "sensor": {
+                "io": "I2C",
+                "bus": "default",
+                "address": "0x76"
+            }
+        },
+        "configuration": "{}",
+        "moddable_manifest": {
+            "include": [
+                "$(NODEREDMCU)/nodes/mcu/sensor/manifest.json",
+                "$(MODDABLE)/modules/drivers/sensors/bmp280/manifest.json"
+            ]
+        },
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 300,
+        "y": 160,
+        "wires": [
+            [
+                "0596cfe502c185c4"
+            ]
+        ]
+    },
+    {
+        "id": "0596cfe502c185c4",
+        "type": "debug",
+        "z": "c606d97dbc747042",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 460,
+        "y": 160,
+        "wires": []
+    }
+]

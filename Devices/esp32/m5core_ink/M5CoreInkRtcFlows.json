@@ -1,0 +1,160 @@
+[
+    {
+        "id": "9d8def21998acd7e",
+        "type": "tab",
+        "label": "RTC",
+        "disabled": false,
+        "info": "",
+        "env": [],
+        "_mcu": {
+            "mcu": true
+        }
+    },
+    {
+        "id": "975e8ff9e14b2056",
+        "type": "inject",
+        "z": "9d8def21998acd7e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 140,
+        "y": 140,
+        "wires": [
+            [
+                "db6e23cfd593f6bc"
+            ]
+        ]
+    },
+    {
+        "id": "db6e23cfd593f6bc",
+        "type": "mcu_clock",
+        "z": "9d8def21998acd7e",
+        "name": "",
+        "platform": "",
+        "module": "embedded:RTC/PCF8563",
+        "options": {
+            "clock": {
+                "io": "SMBus",
+                "clock": "22",
+                "data": "21",
+                "address": "0x51"
+            }
+        },
+        "configuration": "{}",
+        "moddable_manifest": {
+            "include": [
+                "$(NODEREDMCU)/nodes/mcu/clock/manifest.json",
+                "$(MODDABLE)/modules/drivers/peripherals/pcf8563/manifest.json"
+            ]
+        },
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 350,
+        "y": 180,
+        "wires": [
+            [
+                "6a7e64e95c300ce1"
+            ]
+        ]
+    },
+    {
+        "id": "079c4698d7caeb63",
+        "type": "inject",
+        "z": "9d8def21998acd7e",
+        "name": "",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 150,
+        "y": 220,
+        "wires": [
+            [
+                "db6e23cfd593f6bc"
+            ]
+        ]
+    },
+    {
+        "id": "6a7e64e95c300ce1",
+        "type": "function",
+        "z": "9d8def21998acd7e",
+        "name": "function 1",
+        "func": "const dt=new Date(msg.payload);\nconst str = dt.getHours()+\":\"+dt.getMinutes()+\":\"+dt.getSeconds();\nmsg.payload=str;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 500,
+        "y": 180,
+        "wires": [
+            [
+                "10f4b0de70fdeba0"
+            ]
+        ]
+    },
+    {
+        "id": "10f4b0de70fdeba0",
+        "type": "debug",
+        "z": "9d8def21998acd7e",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 660,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "584eecc920c7b37b",
+        "type": "comment",
+        "z": "9d8def21998acd7e",
+        "name": "ClockNode",
+        "info": "Clockノードは\npayloadがあると、それ時間（TimeStamp)で初期化され、\nPayloadがないと時間をPayloadに返します。",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 400,
+        "y": 300,
+        "wires": []
+    }
+]

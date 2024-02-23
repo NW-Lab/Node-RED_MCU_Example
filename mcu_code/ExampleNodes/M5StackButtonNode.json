@@ -1,0 +1,25 @@
+[
+    {
+        "id": "1017cc0e2a06da55",
+        "type": "mcu_code",
+        "z": "abf55a50195b9e0d",
+        "name": "M5StackButton",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "initialize": "buttonA.onChanged = function () {\r\n  const up = this.read()\r\n  if (up === 0) {\r\n    msg.send(\"BtnA\");\r\n  }\r\n}\r\nbuttonB.onChanged = function () {\r\n  const up = this.read()\r\n  if (up === 0) {\r\n    msg.send(\"BtnB\");\r\n  }\r\n}\r\nbuttonC.onChanged = function () {\r\n  const up = this.read()\r\n  if (up === 0) {\r\n    msg.send(\"BtnC\");\r\n  }\r\n}",
+        "finalize": "",
+        "libs": [],
+        "moddable_manifest": "{include: \"./manifest.json\"}",
+        "_mcu": {
+            "mcu": false
+        },
+        "x": 460,
+        "y": 360,
+        "wires": [
+            [
+                "087a9ce6e7125150"
+            ]
+        ]
+    }
+]

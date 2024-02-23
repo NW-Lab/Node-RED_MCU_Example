@@ -1,0 +1,96 @@
+[
+    {
+        "id": "a9469753d31dfb25",
+        "type": "tab",
+        "label": "フロー 2",
+        "disabled": false,
+        "info": "",
+        "env": [],
+        "_mcu": {
+            "mcu": true
+        }
+    },
+    {
+        "id": "4043457111bf2b23",
+        "type": "inject",
+        "z": "a9469753d31dfb25",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 360,
+        "y": 200,
+        "wires": [
+            [
+                "38a937622a3b18a3"
+            ]
+        ]
+    },
+    {
+        "id": "c7d233f7729a0722",
+        "type": "debug",
+        "z": "a9469753d31dfb25",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 900,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "38a937622a3b18a3",
+        "type": "mcu_code",
+        "z": "a9469753d31dfb25",
+        "name": "mcu_code 1",
+        "func": "msg.payload=\"abc\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "initialize": "//const val=AW3641.off;\r\n//const val=AW3641.Time220ms_Brightness100;\r\n//const val=AW3641.Time220ms_Brightness90;\r\n//const val=AW3641.Time220ms_Brightness80;\r\n//const val=AW3641.Time220ms_Brightness70;\r\n//const val=AW3641.Time220ms_Brightness60;\r\nconst val=AW3641.Time220ms_Brightness50;\r\n//const val=AW3641.Time220ms_Brightness40;\r\n//const val=AW3641.Time220ms_Brightness30;\r\n//const val=AW3641.Time1_3s_Brightness100;\r\n//const val=AW3641.Time1_3s_Brightness90;\r\n//const val=AW3641.Time1_3s_Brightness80;\r\n//const val=AW3641.Time1_3s_Brightness70;\r\n//const val=AW3641.Time1_3s_Brightness60;\r\n//const val=AW3641.Time1_3s_Brightness50;\r\n//const val=AW3641.Time1_3s_Brightness40;\r\n//const val=AW3641.Time1_3s_Brightness30;\t\r\n\r\nconst lamp = new AW3641({pin:26,});\r\n\r\nTimer.repeat(() => {\r\n\tlamp.flash(val);\r\n\ttrace(\"flash\\n\");\r\n}, 2000);\r\n\r\n\r\n",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "Timer",
+                "module": "timer"
+            },
+            {
+                "var": "AW3641",
+                "module": "aw3641"
+            }
+        ],
+        "moddable_manifest": "{\"include\":[\"$(MODDABLE)/examples/manifest_base.json\",\"$(MODDABLE)/modules/drivers/aw3641/manifest.json\"],\"modules\":{\"*\":[\"./main\"]}}",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 650,
+        "y": 220,
+        "wires": [
+            [
+                "c7d233f7729a0722"
+            ]
+        ]
+    }
+]

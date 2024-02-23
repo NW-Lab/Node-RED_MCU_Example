@@ -89,7 +89,7 @@
 |:--:|:--:|:--:|:--:|:--:|:--:|:--|
 |VIVRATOR-MOTOR|UNIDIRECTIONAL VIBRATION MOTORS||GPIO|||||
 |FAN|Undirectional DC Motors||GPIO|||||
-|FlashLight|FlashLight|AW3641EDNR|GPIO PORTB|||
+|FlashLight|FlashLight|AW3641EDNR|GPIO PORTB|-||
 |Hbridge Unit|H-Bridge|RZ7899+STM32F030F3P6|I2C||||
 |8Servos Unit|Motor Servo Controller Driver Unit||I2C||||
 |HBridge v1.1 Unit|H-Bridge|RX7899+INA199A+STM32F030F4P6|I2C||||

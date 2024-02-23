@@ -1,0 +1,55 @@
+[
+    {
+        "id": "abf55a50195b9e0d",
+        "type": "tab",
+        "label": "M5AtomMatrixButton",
+        "disabled": false,
+        "info": "",
+        "env": [],
+        "_mcu": {
+            "mcu": false
+        }
+    },
+    {
+        "id": "1017cc0e2a06da55",
+        "type": "mcu_code",
+        "z": "abf55a50195b9e0d",
+        "name": "M5StackButton",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "initialize": "buttonA.onChanged = function () {\r\n  const up = this.read()\r\n  if (up === 0) {\r\n    msg.send(\"BtnA\");\r\n  }\r\n}\r\nbuttonB.onChanged = function () {\r\n  const up = this.read()\r\n  if (up === 0) {\r\n    msg.send(\"BtnB\");\r\n  }\r\n}\r\nbuttonC.onChanged = function () {\r\n  const up = this.read()\r\n  if (up === 0) {\r\n    msg.send(\"BtnC\");\r\n  }\r\n}",
+        "finalize": "",
+        "libs": [],
+        "moddable_manifest": "{include: \"./manifest.json\"}",
+        "_mcu": {
+            "mcu": false
+        },
+        "x": 460,
+        "y": 360,
+        "wires": [
+            [
+                "087a9ce6e7125150"
+            ]
+        ]
+    },
+    {
+        "id": "087a9ce6e7125150",
+        "type": "debug",
+        "z": "abf55a50195b9e0d",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "_mcu": {
+            "mcu": false
+        },
+        "x": 680,
+        "y": 360,
+        "wires": []
+    }
+]
